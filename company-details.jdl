@@ -1,0 +1,29 @@
+/** Company details */
+entity Company {
+	cin String required
+    name String
+    registeredAddress String
+    dateOfIncorporation LocalDate
+    authorisedCapital Long
+    paidUpCapital Long
+    emailId String
+    dateOfLastAGM LocalDate
+    dateOfBalanceSheet LocalDate
+    companyStatus String
+    rocCode String
+}
+
+entity Director {
+	din String
+    name String
+    beginDate LocalDate
+    endDate LocalDate
+}
+
+relationship OneToMany {
+  Company{directors} to Director{company}
+}
+
+service * with serviceClass
+paginate * with pagination
+search * with elasticsearch

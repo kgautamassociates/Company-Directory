@@ -1,0 +1,70 @@
+{
+  "name": "Company",
+  "fields": [
+    {
+      "fieldName": "cin",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "registeredAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateOfIncorporation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "authorisedCapital",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "paidUpCapital",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "emailId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateOfLastAGM",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dateOfBalanceSheet",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "companyStatus",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rocCode",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "director",
+      "otherEntityRelationshipName": "company",
+      "relationshipName": "directors"
+    }
+  ],
+  "javadoc": "Company details",
+  "entityTableName": "company",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "searchEngine": "elasticsearch",
+  "changelogDate": "20210905075737"
+}
